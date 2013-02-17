@@ -1,4 +1,5 @@
 Alazharmakassar::Application.routes.draw do
+  match '/daftar' => 'users#new'
   match '/profilyayasan' => 'pages#profilyayasan'
   match '/tk' => 'pages#tk'
   match '/sd' => 'pages#sd'

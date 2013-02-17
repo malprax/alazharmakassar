@@ -1,9 +1,10 @@
 require 'test_helper'
+require 'pages_controller'
 
 class PagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
-    assert_response :success
+    assert_response :success    
   end
 
   test "should get profilyayasan" do
