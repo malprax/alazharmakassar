@@ -21,11 +21,11 @@ Alazharmakassar::Application.routes.draw do
   #   resources :products
 
   # Sample resource route with options:
-  #   resources :products do
+     resources :users do
   #     member do
   #       get 'short'
   #       post 'toggle'
-  #     end
+       end
   #
   #     collection do
   #       get 'sold'
