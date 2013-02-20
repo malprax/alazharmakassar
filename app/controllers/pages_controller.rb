@@ -21,5 +21,6 @@ class PagesController < ApplicationController
 
   def login
     @title = "Log In"
+    @user = User.find(params[:user])
   end
 end

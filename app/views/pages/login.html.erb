@@ -1,2 +1,14 @@
-<h1>Pages#login</h1>
-<p>Find me in app/views/pages/login.html.erb</p>
+<h1>Halaman Login</h1>
+<%= form_for(@user) do |f| %>
+	<div id="class">
+		<%= f.text_field :name%>
+		<%= f.text_area :name%>
+	</div>
+	<div id="class">
+		<%= f.text_field :password%>
+		<%= f.text_area :password%>
+	</div>
+	<div id="action">
+		<%= f.submit "Login"%>
+	</div>
+<% end %>
