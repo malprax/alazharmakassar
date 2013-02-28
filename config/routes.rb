@@ -1,10 +1,16 @@
 Alazharmakassar::Application.routes.draw do
+  resources :users
+  resources :sessions, :only => [:new, :create, :destroy]
+  match '/signup' => 'users#new'
+  match '/login' => 'sessions#new'
+  match '/signout' => 'sessions#destroy'
+
   match '/daftar' => 'users#new'
   match '/profilyayasan' => 'pages#profilyayasan'
   match '/tk' => 'pages#tk'
   match '/sd' => 'pages#sd'
   match '/smp' => 'pages#smp'
-  match '/login' => 'pages#login'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -21,11 +27,11 @@ Alazharmakassar::Application.routes.draw do
   #   resources :products
 
   # Sample resource route with options:
-     resources :users do
+  #   resources :users do
   #     member do
   #       get 'short'
   #       post 'toggle'
-       end
+  #     end
   #
   #     collection do
   #       get 'sold'
